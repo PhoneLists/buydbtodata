@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DB To Data — Global Data Marketplace</title>
+<meta name="description" content="DB To Data — discover phone number, WhatsApp, Telegram, email and global database resources.">
+<meta name="keywords" content="DB To Data, phone number data, WhatsApp data, Telegram data, email data, global database">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1f2937;
+  --muted:#697386;
+  --paper:#fbfaf7;
+  --white:#fff;
+  --cream:#f2ede4;
+  --orange:#f05a3c;
+  --orange2:#ff8a4c;
+  --purple:#6047d8;
+  --green:#168c70;
+  --border:#e8e1d8;
+  --shadow:0 18px 45px rgba(48,37,22,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,calc(100% - 34px));margin:auto}
+
+/* top */
+.topline{background:#211d19;color:#ddd4c9;font-size:12px}
+.topline .container{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.topline a:hover{color:#fff}
+
+/* header */
+header{background:var(--paper);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:Outfit,sans-serif;font-weight:800;font-size:25px;letter-spacing:-1px}
+.brand b{color:var(--orange)}
+.brand small{display:block;font-family:Manrope;font-size:8px;letter-spacing:2px;color:#9a9187;font-weight:700;margin-top:-5px}
+.menu{display:flex;list-style:none;gap:3px;align-items:center}
+.menu a{font-size:12px;font-weight:700;color:#554e47;padding:10px 11px;border-radius:7px}
+.menu a:hover{background:#eee8df;color:var(--orange)}
+.nav-cta{background:#211d19!important;color:#fff!important;border-radius:30px!important;padding:10px 16px!important}
+.hamb{display:none;border:1px solid #d9d0c5;background:transparent;width:42px;height:39px;border-radius:8px;font-size:18px}
+
+/* hero */
+.hero{padding:76px 0 70px;background:var(--cream);overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-210px;top:-220px;background:#f05a3c13}
+.hero:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;left:-170px;bottom:-200px;background:#6047d810}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:center;position:relative;z-index:2}
+.label{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #e1d8cd;border-radius:30px;padding:7px 12px;font-size:10px;font-weight:800;letter-spacing:1.2px;color:#6d6257;margin-bottom:19px}
+.label i{width:7px;height:7px;border-radius:50%;background:var(--orange)}
+h1{font-family:Outfit,sans-serif;font-size:62px;line-height:1.01;letter-spacing:-2.5px;max-width:700px}
+h1 span{color:var(--orange)}
+.hero p{font-size:15px;color:#71685f;max-width:650px;margin:21px 0 28px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 19px;border-radius:7px;font-size:12px;font-weight:800}
+.primary{background:var(--orange);color:#fff;box-shadow:0 10px 25px #f05a3c25}
+.primary:hover{background:#db4d32}
+.secondary{border:1px solid #cfc5b9;background:#fff;color:#342f2b}
+.secondary:hover{background:#f4efe8}
+
+/* hero visual */
+.visual{background:#fff;border:1px solid #e0d7cc;border-radius:22px;padding:22px;box-shadow:var(--shadow);transform:rotate(2deg)}
+.visual-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee7df;padding-bottom:15px;margin-bottom:17px}
+.visual-head strong{font-family:Outfit;font-size:13px}.live{font-size:9px;color:var(--green);font-weight:800}
+.visual-main{background:#211d19;border-radius:15px;padding:24px;color:#fff}
+.visual-main small{color:#aaa095;font-size:9px;letter-spacing:1px}
+.visual-main h2{font-family:Outfit;font-size:28px;margin:4px 0 17px}
+.graph{height:90px;display:flex;align-items:end;gap:7px;border-bottom:1px solid #ffffff18}
+.graph i{display:block;flex:1;border-radius:5px 5px 0 0;background:linear-gradient(#ff9b62,#f05a3c)}
+.graph i:nth-child(1){height:35%}.graph i:nth-child(2){height:50%}.graph i:nth-child(3){height:43%}.graph i:nth-child(4){height:72%}.graph i:nth-child(5){height:58%}.graph i:nth-child(6){height:85%}.graph i:nth-child(7){height:66%}.graph i:nth-child(8){height:94%}
+.visual-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:15px}
+.vstat{background:#f8f5f0;border-radius:9px;padding:11px}.vstat b{font-family:Outfit;display:block;font-size:16px}.vstat span{font-size:8px;color:#8b8177}
+
+/* section */
+section{padding:78px 0}
+.section-title{max-width:690px;margin:0 auto 38px;text-align:center}
+.overline{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;color:var(--orange);font-weight:900}
+.section-title h2{font-family:Outfit;font-size:36px;line-height:1.12;letter-spacing:-1px;margin:6px 0 10px}
+.section-title p{font-size:13px;color:var(--muted)}
+
+/* categories */
+.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.category{background:#fff;border:1px solid var(--border);border-radius:15px;padding:25px;display:grid;grid-template-columns:54px 1fr auto;gap:18px;align-items:center;transition:.25s}
+.category:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d5c7b8}
+.cat-icon{width:54px;height:54px;border-radius:13px;display:grid;place-items:center;background:#f9e9e4;color:var(--orange);font-family:Outfit;font-weight:800;font-size:19px}
+.category:nth-child(2) .cat-icon{background:#eee9fb;color:var(--purple)}
+.category:nth-child(3) .cat-icon{background:#e7f5f0;color:var(--green)}
+.category:nth-child(4) .cat-icon{background:#fff0d9;color:#bb6a00}
+.category h3{font-family:Outfit;font-size:18px}.category p{font-size:11px;color:#7b746c;margin-top:3px}
+.arrow{font-size:18px;color:#b0a69b}
+
+/* split */
+.split{background:#211d19;color:#fff}
+.split-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.split h2{font-family:Outfit;font-size:39px;line-height:1.1;margin:7px 0 14px}
+.split p{color:#b9afa4;font-size:13px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:24px}
+.check{border:1px solid #ffffff15;background:#ffffff06;border-radius:10px;padding:14px}
+.check b{display:block;font-size:12px}.check span{font-size:10px;color:#968c81}
+.map-card{background:#2a2520;border:1px solid #413a32;border-radius:18px;padding:25px}
+.map-top{display:flex;justify-content:space-between;color:#aaa095;font-size:10px;margin-bottom:22px}
+.map-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
+.map-grid i{height:38px;border-radius:5px;background:#3a332c}.map-grid i:nth-child(3n){background:#f05a3c}.map-grid i:nth-child(5n){background:#6047d8}.map-grid i:nth-child(7n){background:#168c70}
+.map-label{margin-top:18px;display:flex;gap:18px;font-size:10px;color:#a89d92}.map-label b{color:#fff}
+
+/* directory */
+.directory{background:#f1ece5}
+.directory-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}
+.directory-bar strong{font-family:Outfit;font-size:15px}
+.search{position:relative;width:310px}.search input{width:100%;height:43px;border:1px solid #d9d0c5;background:#fff;border-radius:7px;padding:0 13px 0 37px;font:inherit;font-size:12px;outline:none}.search input:focus{border-color:var(--orange)}.search span{position:absolute;left:13px;top:9px;color:#8a8178}
+.directory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.country{background:#fff;border:1px solid #e2d9ce;border-radius:8px;padding:14px 15px;font-size:11px;font-weight:800;transition:.2s}.country:hover{border-color:#e6a08d;color:var(--orange);transform:translateY(-2px)}
+
+/* collections */
+.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.collection{border:1px solid var(--border);background:#fff;border-radius:16px;padding:26px;position:relative;overflow:hidden}
+.collection.featured{background:var(--purple);color:#fff;border-color:var(--purple)}
+.ribbon{position:absolute;top:18px;right:18px;border-radius:20px;padding:5px 9px;background:#f9e9e4;color:var(--orange);font-size:8px;font-weight:900}
+.featured .ribbon{background:#ffffff1c;color:#fff}
+.collection h3{font-family:Outfit;font-size:21px;margin:15px 0 7px}.collection p{font-size:11px;color:#777067}.featured p{color:#d9d1ef}
+.collection .amount{font-family:Outfit;font-size:30px;margin:17px 0}
+.collection ul{list-style:none;margin:10px 0 21px}.collection li{font-size:11px;color:#6f675f;margin:7px 0}.featured li{color:#e2dcf4}.collection li:before{content:"✓";color:var(--green);font-weight:900;margin-right:7px}
+
+/* faq contact */
+.faq{max-width:820px;margin:auto}.faq-item{background:#fff;border:1px solid var(--border);border-radius:8px;margin-bottom:9px}.faq-q{display:flex;justify-content:space-between;cursor:pointer;padding:16px 18px;font-size:12px;font-weight:800}.faq-a{display:none;padding:0 18px 16px;color:#737b86;font-size:11px}
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.contact{background:#fff;border:1px solid var(--border);border-radius:12px;text-align:center;padding:22px}.contact-icon{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;margin:0 auto 10px;background:#f9e9e4;color:var(--orange);font-size:11px;font-weight:900}.contact h3{font-family:Outfit;font-size:15px}.contact p{font-size:10px;color:#7b746d;margin-top:3px}.contact a:hover{color:var(--orange)}
+
+/* footer */
+footer{background:#211d19;color:#9e9489;padding:52px 0 18px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}.foot-brand{font-family:Outfit;color:#fff;font-size:22px;font-weight:800}.foot-brand b{color:#ff8460}.foot-copy{font-size:11px;max-width:350px;margin-top:11px}.foot-title{color:#fff;font-size:12px;font-weight:800;margin-bottom:12px}.foot-links{list-style:none}.foot-links li{margin:7px 0}.foot-links a{font-size:11px;color:#948a80}.foot-links a:hover{color:#fff}.copyright{border-top:1px solid #3a332c;margin-top:35px;padding-top:16px;text-align:center;font-size:9px;color:#71685f}
+
+/* responsive */
+@media(max-width:1000px){
+.menu{display:block}.menu{color:#211d19}.menu{cursor:pointer}.menu.open{background:#211d19;color:#fff}
+.menu{position:relative}
+.menu-list{display:none}
+.nav{position:relative}.menu{font-size:0}.menu:after{content:"☰";font-size:18px}
+.menu-list{}
+#navMenu{display:none;position:absolute;left:0;right:0;top:75px;background:var(--paper);border:1px solid var(--border);border-radius:10px;padding:8px;box-shadow:var(--shadow)}
+#navMenu.show{display:block}#navMenu li{list-style:none}#navMenu a{display:block}
+.hero-grid,.split-grid{grid-template-columns:1fr}.visual{max-width:600px}.category-grid{grid-template-columns:1fr 1fr}.directory-grid{grid-template-columns:repeat(3,1fr)}.contact-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+.container{width:calc(100% - 28px)}.topline .container{justify-content:center}.topline .right{display:none}
+h1{font-size:43px}.hero{padding:60px 0}.visual{transform:none}.category-grid,.collection-grid,.contact-grid,.footer-grid{grid-template-columns:1fr}.directory-grid{grid-template-columns:repeat(2,1fr)}.directory-bar{display:block}.search{width:100%;margin-top:13px}.checks{grid-template-columns:1fr}section{padding:58px 0}.section-title h2,.split h2{font-size:30px}
+}
+@media(max-width:430px){h1{font-size:36px}.directory-grid{grid-template-columns:1fr}.visual-bottom{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topline">
+  <div class="container">
+    <div><a href="https://wa.me/8801918754550" target="_blank" rel="nofollow">WhatsApp +8801918754550</a> &nbsp;•&nbsp; <a href="https://t.me/Dbtodatac" target="_blank" rel="nofollow">@Dbtodatac</a></div>
+    <div class="right">DATA DIRECTORY • GLOBAL RESOURCES</div>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">DB <b>TO DATA</b><small>DATA DIRECTORY</small></a>
+    <button class="hamb" id="hamb" aria-label="Open navigation">☰</button>
+    <ul class="menu" id="navMenu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#countries">Countries</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="nav-cta" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="label"><i></i> GLOBAL DATA DIRECTORY</div>
+      <h1>Discover data.<br><span>Build connections.</span></h1>
+      <p>DB To Data brings phone number data, WhatsApp data, Telegram data, email resources and country-based database collections into one clean digital directory.</p>
+      <div class="actions">
+        <a class="btn primary" href="#categories">Explore Database →</a>
+        <a class="btn secondary" href="#countries">Browse Countries</a>
+      </div>
+    </div>
+
+    <div class="visual">
+      <div class="visual-head"><strong>DB TO DATA / LIVE DIRECTORY</strong><span class="live">● DIRECTORY ONLINE</span></div>
+      <div class="visual-main">
+        <small>DATA COVERAGE</small>
+        <h2>Global Resources</h2>
+        <div class="graph"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="visual-bottom">
+        <div class="vstat"><b>04+</b><span>Categories</span></div>
+        <div class="vstat"><b>Global</b><span>Markets</span></div>
+        <div class="vstat"><b>24/7</b><span>Access</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="container">
+    <div class="section-title">
+      <div class="overline">Data categories</div>
+      <h2>Everything starts with the right dataset.</h2>
+      <p>Choose a category to move directly to the relevant DB To Data resource.</p>
+    </div>
+
+    <div class="category-grid">
+      <a class="category" href="https://dbtodata.com/phone-number-data">
+        <div class="cat-icon">01</div><div><h3>Phone Number Data</h3><p>Phone number and country database resources.</p></div><div class="arrow">↗</div>
+      </a>
+      <a class="category" href="https://dbtodata.com/whatsapp-data">
+        <div class="cat-icon">02</div><div><h3>WhatsApp Data</h3><p>WhatsApp number and market data resources.</p></div><div class="arrow">↗</div>
+      </a>
+      <a class="category" href="https://dbtodata.com/telegram-data">
+        <div class="cat-icon">03</div><div><h3>Telegram Data</h3><p>Telegram-focused data and database categories.</p></div><div class="arrow">↗</div>
+      </a>
+      <a class="category" href="https://dbtodata.com/email-data">
+        <div class="cat-icon">04</div><div><h3>Email Data</h3><p>Email list and business data resources.</p></div><div class="arrow">↗</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="container split-grid">
+    <div>
+      <div class="overline" style="color:#ff8460">The directory</div>
+      <h2>One place to explore different data markets.</h2>
+      <p>Use the directory structure to move from a data category to a country or collection without unnecessary steps.</p>
+      <div class="checks">
+        <div class="check"><b>Country based</b><span>Market-oriented resources</span></div>
+        <div class="check"><b>Multiple categories</b><span>Phone, WhatsApp, Telegram & email</span></div>
+        <div class="check"><b>Simple navigation</b><span>Clean category structure</span></div>
+        <div class="check"><b>Responsive layout</b><span>Desktop & mobile ready</span></div>
+      </div>
+    </div>
+    <div class="map-card">
+      <div class="map-top"><span>GLOBAL DATA MAP</span><span>DB / DIRECTORY</span></div>
+      <div class="map-grid">
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div class="map-label"><span><b>12</b> sample resources</span><span><b>Global</b> coverage</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="directory" id="countries">
+  <div class="container">
+    <div class="section-title">
+      <div class="overline">Directory</div>
+      <h2>Country & data resources</h2>
+      <p>Search the available country and category pages.</p>
+    </div>
+    <div class="directory-bar">
+      <strong>Browse resources</strong>
+      <div class="search"><span>⌕</span><input id="countrySearch" type="search" placeholder="Search country or data..."></div>
+    </div>
+    <div class="directory-grid">
+      <a class="country" href="https://dbtodata.com/phone-number-data">Phone Number Data</a>
+      <a class="country" href="https://dbtodata.com/whatsapp-data">WhatsApp Data</a>
+      <a class="country" href="https://dbtodata.com/telegram-data">Telegram Data</a>
+      <a class="country" href="https://dbtodata.com/email-data">Email Data</a>
+      <a class="country" href="https://dbtodata.com/usa-phone-number-data">USA Database</a>
+      <a class="country" href="https://dbtodata.com/canada-phone-number-data">Canada Database</a>
+      <a class="country" href="https://dbtodata.com/uk-phone-number-data">UK Database</a>
+      <a class="country" href="https://dbtodata.com/australia-phone-number-data">Australia Database</a>
+      <a class="country" href="https://dbtodata.com/germany-phone-number-data">Germany Database</a>
+      <a class="country" href="https://dbtodata.com/france-phone-number-data">France Database</a>
+      <a class="country" href="https://dbtodata.com/india-phone-number-data">India Database</a>
+      <a class="country" href="https://dbtodata.com/brazil-phone-number-data">Brazil Database</a>
+    </div>
+  </div>
+</section>
+
+<section id="collections">
+  <div class="container">
+    <div class="section-title">
+      <div class="overline">Collections</div>
+      <h2>Featured data collections</h2>
+      <p>Use these blocks to highlight your most important data products.</p>
+    </div>
+    <div class="collection-grid">
+      <article class="collection">
+        <span class="ribbon">PHONE</span><h3>USA Phone Data</h3><p>USA phone number data and package resources.</p>
+        <div class="amount">90M+</div>
+        <ul><li>90M data package</li><li>5M / 3M / 1M packages</li><li>500K / 100K options</li></ul>
+        <a class="btn primary" href="https://dbtodata.com/phone-number-data">View Collection</a>
+      </article>
+      <article class="collection featured">
+        <span class="ribbon">POPULAR</span><h3>WhatsApp Data</h3><p>Country and market-based WhatsApp data resources.</p>
+        <div class="amount">Global</div>
+        <ul><li>Country categories</li><li>WhatsApp resources</li><li>Market collections</li></ul>
+        <a class="btn primary" href="https://dbtodata.com/whatsapp-data">View Collection</a>
+      </article>
+      <article class="collection">
+        <span class="ribbon">TELEGRAM</span><h3>Telegram Data</h3><p>Telegram-focused database and number resources.</p>
+        <div class="amount">Global</div>
+        <ul><li>Country categories</li><li>Telegram resources</li><li>Special database options</li></ul>
+        <a class="btn primary" href="https://dbtodata.com/telegram-data">View Collection</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="faq">
+  <div class="container">
+    <div class="section-title"><div class="overline">FAQ</div><h2>Questions, answered.</h2><p>Quick information about DB To Data.</p></div>
+    <div class="faq">
+      <div class="faq-item"><div class="faq-q">What is DB To Data? <span>+</span></div><div class="faq-a">DB To Data is a data-directory website presenting phone number, WhatsApp, Telegram, email and related database resources.</div></div>
+      <div class="faq-item"><div class="faq-q">What categories are available? <span>+</span></div><div class="faq-a">The main categories are Phone Number Data, WhatsApp Data, Telegram Data and Email Data, with country and collection resources.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I search the country directory? <span>+</span></div><div class="faq-a">Yes. Use the search field in the directory section to filter the displayed resources.</div></div>
+      <div class="faq-item"><div class="faq-q">How can I contact DB To Data? <span>+</span></div><div class="faq-a">WhatsApp, Telegram, Facebook and YouTube contact links are available below.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-title"><div class="overline">Connect</div><h2>Contact DB To Data</h2><p>Choose your preferred channel.</p></div>
+    <div class="contact-grid">
+      <div class="contact"><div class="contact-icon">WA</div><h3>WhatsApp</h3><p><a href="https://wa.me/8801918754550" target="_blank" rel="nofollow">+8801918754550</a></p></div>
+      <div class="contact"><div class="contact-icon">TG</div><h3>Telegram</h3><p><a href="https://t.me/Dbtodatac" target="_blank" rel="nofollow">@Dbtodatac</a></p></div>
+      <div class="contact"><div class="contact-icon">FB</div><h3>Facebook</h3><p><a href="https://facebook.com/dbtdata" target="_blank" rel="nofollow">dbtdata</a></p></div>
+      <div class="contact"><div class="contact-icon">YT</div><h3>YouTube</h3><p><a href="https://youtube.com/@DB_To_Data" target="_blank" rel="nofollow">@DB_To_Data</a></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><div class="foot-brand">DB <b>TO DATA</b></div><p class="foot-copy">A clean global data directory for phone, WhatsApp, Telegram, email and country-based database resources.</p></div>
+    <div><div class="foot-title">Data</div><ul class="foot-links"><li><a href="https://dbtodata.com/phone-number-data">Phone Data</a></li><li><a href="https://dbtodata.com/whatsapp-data">WhatsApp Data</a></li><li><a href="https://dbtodata.com/telegram-data">Telegram Data</a></li><li><a href="https://dbtodata.com/email-data">Email Data</a></li></ul></div>
+    <div><div class="foot-title">Explore</div><ul class="foot-links"><li><a href="#categories">Categories</a></li><li><a href="#countries">Countries</a></li><li><a href="#collections">Collections</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    <div><div class="foot-title">Connect</div><ul class="foot-links"><li><a href="https://wa.me/8801918754550" target="_blank" rel="nofollow">WhatsApp</a></li><li><a href="https://t.me/Dbtodatac" target="_blank" rel="nofollow">Telegram</a></li><li><a href="https://facebook.com/dbtdata" target="_blank" rel="nofollow">Facebook</a></li><li><a href="https://youtube.com/@DB_To_Data" target="_blank" rel="nofollow">YouTube</a></li></ul></div>
+  </div>
+  <div class="container copyright">© <span id="year"></span> DB To Data. All Rights Reserved.</div>
+</footer>
+
+<script>
+const hamb=document.getElementById('hamb'),nav=document.getElementById('navMenu');
+hamb.addEventListener('click',()=>nav.classList.toggle('show'));
+document.querySelectorAll('#navMenu a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('show')));
+document.getElementById('countrySearch').addEventListener('input',function(){
+  const q=this.value.toLowerCase().trim();
+  document.querySelectorAll('.country').forEach(x=>x.style.display=x.textContent.toLowerCase().includes(q)?'block':'none');
+});
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const a=q.nextElementSibling,open=a.style.display==='block';
+  a.style.display=open?'none':'block';
+  q.querySelector('span').textContent=open?'+':'−';
+}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
